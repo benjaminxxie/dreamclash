@@ -573,14 +573,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In the quiet town of Eldoria, young Oliver found himself slipping into
-    a deep slumber, unaware of the magical journey awaiting him. As he dreamt, the
-    familiar surroundings faded, and he stood on the edge of Etheria, a realm of
-    enchantment. Guided by the wise wizard Eldor, Oliver, now adorned in enchanted
-    armor, stepped through a shimmering portal into a world of floating islands and
-    radiant landscapes. The air hummed with magic, and Oliver, armed with a shimmering
-    sword, embraced his destiny as the chosen one to save Etheria from impending
-    darkness. The adventure is just beginning.
+  m_text: In the quiet town of Eldoria, young Olivia found herself slipping into
+    a deep slumber, unaware of the magical journey awaiting her. As she dreamt, the
+    familiar surroundings faded, and she stood on the edge of Etheria, a realm of
+    enchantment. Dressed in a mage's cloack, Olivia stepped into a new forested world.
+    The air hummed with magic, and Olivia, armed with her newfound powers, embraced
+    her destiny as the chosen one to save Etheria from impending darkness. The adventure
+    is just beginning.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d34db2c7bf4ac4e4d8190b47075baddb, type: 2}
   m_sharedMaterial: {fileID: 6509518345159678591, guid: d34db2c7bf4ac4e4d8190b47075baddb, type: 2}
