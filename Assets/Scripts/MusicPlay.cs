@@ -8,49 +8,38 @@ public class MusicPlay : MonoBehaviour
     public Slider volumeSlider;
     public GameObject ObjectMusic;
     private float MusicVolume = 1f;
-    private AudioSource AudioSource;
+    [SerializeField] private AudioSource AudioSource;
 
+    public static MusicPlay instance;
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+            // ObjectMusic = GameObject.FindWithTag("BGM"); 
+            AudioSource = GetComponent<AudioSource>();
+            DontDestroyOnLoad(gameObject);
+            AudioSource.Play();
+            // DontDestroyOnLoad(AudioSource);
+        } else {
+            Destroy(gameObject);
+        }
+        
+    }
     private void Start() {
-        ObjectMusic = GameObject.FindWithTag("BGM"); 
-        AudioSource = ObjectMusic.GetComponent<AudioSource>();
-
+        
         // MusicVolume = PlayerPrefs.GetFloat("volume");
+        PlayerPrefs.SetFloat("volume", MusicVolume);
         AudioSource.volume = MusicVolume;
         // volumeSlider.value = MusicVolume;
     }
 
     private void Update() {
+        MusicVolume = PlayerPrefs.GetFloat("volume"); 
         AudioSource.volume = MusicVolume;
-        PlayerPrefs.SetFloat("volume", MusicVolume);
+        
     }
 
     public void VolumeUpdater(float volume) {
-        MusicVolume = volume;
+        PlayerPrefs.SetFloat("volume", volume);
     }
-
-    // public void MusicReset() {
-    //     PlayerPrefs.DeleteKey("volume");
-    //     AudioSource.volume = 1;
-    //     volumeSlider.value = 1;
-    // }
-
-    // public AudioSource AudioSource;
-
-    // private void Start() {
-    //     AudioSource.Play();
-    // }
-
-    // void Update() {
-    //     AudioSource.volume = MusicVolume;
-    // }
-
-    // public void VolumeUpdater(float volume) {
-    //     MusicVolume = volume;
-    // }
-
-    // public void MusicReset() {
-    //     PlayerPrefs.DeleteKey("volume");
-    //     AudioSource.volume = 1;
-    //     volumeSlider.value = 1;
-    // }
 }
