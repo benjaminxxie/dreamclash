@@ -6,7 +6,7 @@ public class HealthController : MonoBehaviour
 {
     //Animator animator;
     [SerializeField] private string sceneNameToLoad;
-    const float MAX_HP = 100f;
+    const float MAX_HP = 125f;
     float _mageHP;
     float MageHP {
         get => _mageHP;
