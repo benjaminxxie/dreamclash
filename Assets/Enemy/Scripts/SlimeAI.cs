@@ -30,7 +30,7 @@ public class SlimeAI : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("MC").transform;
+        player = GameObject.Find("Character").transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
@@ -88,7 +88,7 @@ public class SlimeAI : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        if (distanceToWalkPoint.magnitude < 1f)
+        if (distanceToWalkPoint.magnitude < 20f)
         {
             walkPointSet = false;
         }
@@ -110,6 +110,7 @@ public class SlimeAI : MonoBehaviour
     void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        Debug.Log("Chasing");
     }
 
     void AttackPlayer()
