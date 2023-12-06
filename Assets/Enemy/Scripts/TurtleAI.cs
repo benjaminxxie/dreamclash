@@ -30,7 +30,7 @@ public class TurtleAI : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("MC").transform;
+        player = GameObject.Find("Character").transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
@@ -88,7 +88,7 @@ public class TurtleAI : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        if (distanceToWalkPoint.magnitude < 1f)
+        if (distanceToWalkPoint.magnitude < 20f)
         {
             walkPointSet = false;
         }
