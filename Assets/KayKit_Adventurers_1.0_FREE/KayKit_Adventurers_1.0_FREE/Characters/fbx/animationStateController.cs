@@ -27,6 +27,7 @@ public class animationStateController : MonoBehaviour
         bool WASDPressed = (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"));
         bool shiftPressed = Input.GetKey("left shift");
         bool spacePressed = Input.GetKeyDown("space");
+        bool lmbPressed = (Input.GetMouseButtonDown(0));
 
         //sets isRunning to true if not walking and WASD is pressed
         if (!isWalking && WASDPressed){
@@ -47,6 +48,10 @@ public class animationStateController : MonoBehaviour
 
         if (!isJumping && spacePressed){
             animator.SetTrigger("jump");
+        }
+
+        if (lmbPressed){
+            animator.SetTrigger("attack");
         }
     }
 }

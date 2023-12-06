@@ -17,6 +17,11 @@ public class SlashSpell : MonoBehaviour
     //destroys game object on collision (probably going to remove and replace with damage)
     void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.tag == "Slime" || collision.gameObject.tag == "Turtle")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
         Debug.Log("Hit");
     }
 
