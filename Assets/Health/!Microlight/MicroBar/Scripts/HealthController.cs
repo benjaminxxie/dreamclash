@@ -1,9 +1,11 @@
 using UnityEngine;
 using Microlight.MicroBar;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
     //Animator animator;
+    [SerializeField] private string sceneNameToLoad;
     const float MAX_HP = 100f;
     float _mageHP;
     float MageHP {
@@ -79,7 +81,7 @@ public class HealthController : MonoBehaviour
 
         if (MageHP <= 0)
         {
-        //    animator.SetBool(isDeadHash, true);
+            SceneManager.LoadScene(sceneNameToLoad);
         }
     }
 

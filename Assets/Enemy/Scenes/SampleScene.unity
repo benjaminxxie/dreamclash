@@ -1330,6 +1330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a807cca681824190c83c85cb872cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNameToLoad: End
   _mageHPBar: {fileID: 1363276448}
   _slimeHPBar: {fileID: 374214427}
   _turtleHPBar: {fileID: 473901921}
