@@ -22,7 +22,6 @@ public class SlashSpell : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        Debug.Log("Hit");
     }
 
     
