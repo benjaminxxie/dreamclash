@@ -23,27 +23,6 @@ public class EnemyDamage : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             healthController.TakeDamage(damage);
-        }
-
-        // if(collision.gameObject.tag == "Slime")
-        // {
-        //     healthController.SlimeDamage(damage);
-        //     Debug.Log("slime damaged");
-        // }
-
-        // if (collision.gameObject.tag == "Turtle")
-        // {
-        //     healthController.TurtleDamage(damage);
-        //     Debug.Log("turtle damaged");
-        // }
-
-        // if (collision.gameObject.tag == "Spell")
-        // {
-        //     healthController.TurtleDamage(70);
-        //     healthController.SlimeDamage(70);
-        //     Debug.Log("both damaged");
-        // }
-
-        
+        }  
     }
 }
